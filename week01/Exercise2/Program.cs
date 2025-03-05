@@ -41,7 +41,7 @@ class Program
 
         }
         else {
-            Console.WriteLine($"You don't passed");
+            Console.WriteLine($"You don't passed, strive more, you can do it!!!!!!!!!1");
         }
         if (grade > 93)
             {
