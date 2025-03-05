@@ -13,28 +13,18 @@ class Program
         string letter = "";
 
         if (grade >= 90)
-        {  
-
-                letter = "A";
-        }
+        {letter = "A";}
         
         else if (grade >= 80)
-        {
-            letter = "B";
-            }
+        {letter = "B";}
+
         else if (grade >= 70)
-        {
-            letter = "C";
-        }
+        {letter = "C";}
+
         else if (grade >= 60)
-        {
-            letter = "D";
-        }
-        else
-            {
-            
-            letter = "F";
-            }
+        {letter = "D";}
+
+        else {letter = "F";}
 
         if (grade >= 70)
         {  Console.WriteLine($"You pass the course");
