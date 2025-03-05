@@ -37,7 +37,7 @@ class Program
             }
 
         if (grade >= 70)
-        {  Console.WriteLine($"You pass the course+");
+        {  Console.WriteLine($"You pass the course");
 
         }
         else {
