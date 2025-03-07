@@ -42,7 +42,7 @@ class Program
 
     static int SquareNumber(int number)
     {
-        int square = number * number;
+        int square =  number * number;
         return number;
     }
 
