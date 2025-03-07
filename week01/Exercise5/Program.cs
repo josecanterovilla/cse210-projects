@@ -43,7 +43,7 @@ class Program
     static int SquareNumber(int number)
     {
         int square =  number * number;
-        return number;
+        return square;
     }
 
     static void DisplayResult(string name, int square)
