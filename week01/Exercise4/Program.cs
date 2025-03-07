@@ -37,11 +37,18 @@ class Program
         double average = (double)sum_numbers / (numbers.Count -1);
         int largest = numbers.Max();
         int smallest = smallest_numbers.Min();
+
         Console.WriteLine($"The sum is {sum_numbers}");
         Console.WriteLine($"The average is: {average}");
         Console.WriteLine($"The largest number is: {largest}");
         Console.WriteLine($"The smallest positive number is: {smallest}");
-        Console.WriteLine("Your program is over.");
+        numbers.Sort();
+        Console.WriteLine("The sorted list is:");
+        foreach (int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+
 
 
     }
