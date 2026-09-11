@@ -5,49 +5,76 @@ class Program
 {
     static void Main(string[] args)
     {
-        
 
-        Console.WriteLine("Hello World! This is the Exercise4 Project.");
+
+        Console.WriteLine("Hello World! This is the class Exercise 4 Project.");
 
         List<int> numbers = new List<int>();
+        Console.WriteLine("Enter a list of numbers, type 0 when finished.");
 
-        int number = 1;
-        int sum_numbers = 0;
-        List<int> smallest_numbers = new List<int>();
-
-        while (number != 0)
+        while (true)
         {
-        Console.Write("Insert a list of numbers, type 0 when finished: ");
-        string inputUser = Console.ReadLine();
-        number = int.Parse(inputUser);
-        numbers.Add(number);
-        
+            Console.Write("Enter a number: ");
+            string input = Console.ReadLine();
+            int number = int.Parse(input);
+
+            if (number == 0)
+            {
+
+                break;
+
+            }
+            numbers.Add(number);
         }
 
-        foreach (int i in numbers)
+        int sum = 0;
+        foreach (int number in numbers)
         {
-        sum_numbers = sum_numbers + i;
-        if (i > 0)
-        {
-            smallest_numbers.Add(i);
-            
-        }
+            sum += number;
         }
 
-        double average = (double)sum_numbers / (numbers.Count -1);
-        int largest = numbers.Max();
-        int smallest = smallest_numbers.Min();
+        Console.WriteLine($"The sum is: {sum}");
 
-        Console.WriteLine($"The sum is {sum_numbers}");
+        double average = (double)sum / numbers.Count;
         Console.WriteLine($"The average is: {average}");
-        Console.WriteLine($"The largest number is: {largest}");
-        Console.WriteLine($"The smallest positive number is: {smallest}");
-        numbers.Sort();
-        Console.WriteLine("The sorted list is:");
-        foreach (int num in numbers)
+
+
+        int max = numbers[0];
+
+        foreach (int number in numbers)
         {
-            Console.WriteLine(num);
+            if (number > max)
+            {
+                max = number;
+            }
         }
+
+        Console.WriteLine($"The largest number is: {max}");
+
+        int smallestPositive = int.MaxValue;
+
+        foreach (int number in numbers)
+        {
+            if (number > 0)
+            {
+                if (number < smallestPositive)
+                {
+                    smallestPositive = number;
+                }
+            }
+        }
+
+        Console.WriteLine($"The smallest positive number is: {smallestPositive}");
+
+        numbers.Sort();
+
+        Console.WriteLine("The sorted list is: ");
+
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+
 
 
 
