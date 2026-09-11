@@ -9,7 +9,7 @@ class Program
         Random randomGenerator = new Random();
         int magic_number = randomGenerator.Next(1,100);
 
-        
+
         int repeats = 0;
         string continue_playing = "";
 
@@ -18,10 +18,10 @@ class Program
         {Console.Write("What is your guess?: ");
         string inputUser2 = Console.ReadLine();
         int guess_number = int.Parse(inputUser2);
-        
+
         repeats ++;
 
-        if (magic_number == guess_number) 
+        if (magic_number == guess_number)
         {Console.WriteLine($"You guessed it!, with {repeats} guesses");
         repeats = 0;
         Console.Write("Do you want to keep playing?: ");
@@ -33,7 +33,7 @@ class Program
         else if (magic_number > guess_number)
         {Console.WriteLine("Higher");}
         }
-        
-        
+
+
     }
 }
