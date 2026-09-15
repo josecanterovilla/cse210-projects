@@ -4,13 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Exercise5 Project.");
 
-     
+
         DisplayWelcome();
 
         string userName = PromptUserName();
-        
+
         int userNumber = PromptUserNumber();
 
         int squaredNumber = SquareNumber(userNumber);
@@ -18,7 +17,7 @@ class Program
         DisplayResult(userName, squaredNumber);
     }
 
-   
+
 
     static void DisplayWelcome()
     {
@@ -32,7 +31,7 @@ class Program
 
         return name;
     }
-    
+
     static int PromptUserNumber()
     {
         Console.Write("Please enter your favorite number: ");
@@ -42,12 +41,12 @@ class Program
 
     static int SquareNumber(int number)
     {
-        int square =  number * number;
+        int square = number * number;
         return square;
     }
 
     static void DisplayResult(string name, int square)
     {
-        Console.WriteLine($"{name}, the square of your mumber is {square}");
+        Console.WriteLine($"{name}, the square of your number is {square}");
     }
 }
