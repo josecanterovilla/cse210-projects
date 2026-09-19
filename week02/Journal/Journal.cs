@@ -4,21 +4,35 @@ public class Journal
 
     public void AddEntry(Entry newEntry)
     {
-        return;
+        _entries.Add(newEntry);
     }
 
     public void DisplayAll()
     {
-        return;
+        foreach (Entry entry in _entries)
+        {
+            entry.Display();
+        }
     }
 
     public void SaveToFile(string file)
     {
-        return;
+        using (StreamWriter outputFile = new StreamWriter(file))
+        {
+            foreach (Entry entry in _entries)
+            {
+                outputFile.WriteLine(entry.ToFileLine());
+            }
+        }
     }
 
     public void LoadFromFile(string file)
     {
-        return;
+        _entries.Clear();
+        string[] lines = File.ReadAllLines(file);
+        foreach (string line in lines)
+        {
+            _entries.Add(Entry.FromFileLine(line));
+        }
     }
 }
